@@ -1,3 +1,46 @@
-<p>home works!</p>
-<button mat-raised-button class="signIn-btn" (click)="back()">Sign In</button>
+<div class="homeBg">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">SS Garments</div>
+            <div class="d-flex align-items-center">
+                <a class="col m-2" href="">About Us</a>
+                <a class="col m-2"href="">Men</a>
+                <a class="col m-2"href="">Kids</a>
+                <a class="col m-2"href="">Sale</a>
+                <div class="col m-2 d-flex align-items-center signIn">Sign In
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="signInIcon" fontIcon="person"></mat-icon>
+                </div>
+                </div>
+        </div>
+    </nav>
+
+    <div class="search">
+        <mat-form-field class="searchBox">
+            <!-- <mat-icon>search</mat-icon> -->
+          <input class="inputBox" matInput placeholder="Search product or brand" >
+        </mat-form-field>
+    </div>
+<div fxLayout="row" class="display" fxLayoutGap="16px">
+  <div fxFlex="25%">
+    <mat-card class=" card">
+        <img mat-card-image src="../assets/images/kids1.png" alt="Photo of a Shiba Inu"> 
+      </mat-card>
+      </div>
+      <div fxFlex="25%">
+      <mat-card class="card">      
+        <img mat-card-image src="../assets/images/kids1.png"  alt="Photo of a Shiba Inu">       
+      </mat-card>
+      </div>
+      </div>
+      
+    <div fxLayout="row" class="display mt-3" > 
+      <div fxFlex="25%">
+      <mat-card class="card">
+        
+        <img mat-card-image src="../assets/images/kids1.png"  alt="Photo of a Shiba Inu">
+           
+      </mat-card>
+      </div>
+    </div>
+</div>
 

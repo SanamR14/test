@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a, div{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@font-face {
+    font-family: 'Engagement';
+    src: url('./assets/fonts/Engagement/engagement/Engagement-Regular.ttf');
+  }
