@@ -1,1 +1,1 @@
-https://github.com/SanamR14/responsive_webpage.git
+https://sanamr14.github.io/responsive_webpage/
