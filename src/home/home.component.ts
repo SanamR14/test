@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router){}
 
-  back(){
-    this.router.navigate(['']);
+  signIn(){
+    this.router.navigate(['/signIn']);
   }
 }
