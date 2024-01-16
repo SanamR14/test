@@ -10,6 +10,8 @@ padding: 2rem;
 }
 a, .signInIcon, .signIn {
   font-size: medium;
+}
+.signIn {
   cursor: pointer;
 }
 a {

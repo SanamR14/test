@@ -30,6 +30,6 @@ export class LandingPageComponent  implements OnInit {
   }
   
   signIn(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['']);
   }
 }
