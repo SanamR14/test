@@ -78,9 +78,12 @@ a {
 }
    }
 
-
 .display {
   justify-content: center;
 }
 
- 
+@media (orientation: landscape) {
+ .homeBg {
+  height: fit-content;
+ }
+}
