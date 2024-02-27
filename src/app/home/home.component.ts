@@ -10,13 +10,14 @@ import {FlexLayoutServerModule} from '@angular/flex-layout/server';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Router } from '@angular/router';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, MatCardModule, MatGridListModule, FlexLayoutModule, FlexLayoutServerModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
+    imports: [MatIconModule, FormsModule, MatFormFieldModule, MatInputModule, MatCardModule, MatGridListModule, FlexLayoutModule, FlexLayoutServerModule, FooterComponent]
 })
 export class HomeComponent {
   constructor(private router: Router){}
