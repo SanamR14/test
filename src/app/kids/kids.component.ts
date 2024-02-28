@@ -1,17 +1,18 @@
-import {Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 
 @Component({
   selector: 'app-kids',
   standalone: true,
-  imports: [MatIconModule, MatTableModule],
+  imports: [MatIconModule, MatTableModule, MatPaginatorModule],
   templateUrl: './kids.component.html',
   styleUrl: './kids.component.css'
 })
-export class KidsComponent implements OnInit{
+export class KidsComponent implements OnInit, AfterViewInit{
   
    constructor(private router: Router){}
    ngOnInit() {
@@ -23,6 +24,13 @@ export class KidsComponent implements OnInit{
 
   displayedColumns: string[] = ['category', 'type', 'size', 'cost'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
   // fetchData() : any {
   //   this.http.get('http://localhost:8080/kids').subscribe((data:any) => {
