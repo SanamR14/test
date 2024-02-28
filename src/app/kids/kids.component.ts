@@ -12,12 +12,10 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
   templateUrl: './kids.component.html',
   styleUrl: './kids.component.css'
 })
-export class KidsComponent implements OnInit, AfterViewInit{
+export class KidsComponent implements AfterViewInit{
   
    constructor(private router: Router){}
-   ngOnInit() {
-     //this.fetchData();
-   }
+
    signIn(){
      this.router.navigate(['/signIn']);
    }
@@ -31,13 +29,6 @@ export class KidsComponent implements OnInit, AfterViewInit{
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-
-  // fetchData() : any {
-  //   this.http.get('http://localhost:8080/kids').subscribe((data:any) => {
-  //     this.dataSource = new MatTableDataSource<PeriodicElement>(data);
-
-  //   })
-  // }
 }
 export interface PeriodicElement {
   dressId: string;
@@ -50,12 +41,10 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = 
 [
   {dressId: "ZFL 14082", category: "Shirt", type: "reversable", size: "8", cost: 14.99, count: 25},
-  {dressId: "ZFL 14083", category: "Shirt", type: "reversable", size: "9", cost: 14.99, count: 25},
   {dressId: "ZFL 14084", category: "Shirt", type: "reversable", size: "10", cost: 15.49, count: 25},
   {dressId: "ZFL 14085", category: "Shirt", type: "reversable", size: "12", cost: 15.49, count: 30},
   {dressId: "ZFL 14086", category: "Shirt", type: "reversable", size: "14", cost: 16.49, count: 30},
   {dressId: "ZFL 14087", category: "Shirt", type: "plain", size: "8", cost: 12.99, count: 20},
-  {dressId: "ZFL 14088", category: "Shirt", type: "plain", size: "9", cost: 12.99, count: 20},
   {dressId: "ZFL 14089", category: "Shirt", type: "plain", size: "10", cost: 12.99, count: 20},
   {dressId: "ZFL 14090", category: "Shirt", type: "plain", size: "12", cost: 12.99, count: 30},
   {dressId: "ZFL 14091", category: "Shirt", type: "plain", size: "14", cost: 12.99, count: 30},
