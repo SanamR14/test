@@ -1,0 +1,40 @@
+.navbar 
+{
+    background-color: rgba(226, 225, 225, 0.80);
+}
+a 
+{
+    color: black;
+    font-size: medium;
+    text-decoration: none;
+}
+.logo 
+{
+    font-family: Engagement;
+    font-size: xx-large;
+    padding: 2rem;
+}
+.col 
+{
+    white-space: nowrap;
+}
+.container 
+{
+    position: relative;
+    display: flex;
+}
+.signInIcon, .signIn {
+    font-size: medium;
+}
+.signIn 
+{
+    cursor: pointer;
+}
+.signInIcon 
+{
+    display: contents;
+}
+.listTable
+{
+    margin-top: 2rem;
+}
