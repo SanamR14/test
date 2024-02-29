@@ -6,16 +6,16 @@ on:
     - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
-        node-version: '18.15.0'
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
@@ -26,10 +26,10 @@ jobs:
     - name: Build
       run: npm run build:prod
 
-    - name: Deploy
-      if: success()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/angular-github-actions
-        enable_jekyll: true
+    # - name: Deploy
+    #   if: success()
+    #   uses: sanamR14/test
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: dist/angular-github-actions
+    #     enable_jekyll: true
