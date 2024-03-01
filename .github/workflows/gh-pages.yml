@@ -32,8 +32,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+
     - name: Build and Push
-      uses: . --file Dockerfile
+      uses: Dockerfile
       with:
           push: true
           tags: sanamr14/test:first
