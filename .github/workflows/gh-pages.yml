@@ -26,6 +26,18 @@ jobs:
     - name: Build
       run: npm run build --prod
 
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and Push
+      uses: . --file Dockerfile
+      with:
+          push: true
+          tags: sanamr14/test:first
+
     # - name: Deploy
     #   if: success()
     #   uses: sanamR14/test
