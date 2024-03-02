@@ -27,7 +27,7 @@ jobs:
       run: npm run build --prod
 
     - name: Image
-      run: docker@sha256:c8bb6fa5388b56304dd770c4bc0478de81ce18540173b1a589178c0d31bfce90 build . --file Dockerfile
+      run: docker build . --file Dockerfile
 
     - name: Login to DockerHub
       uses: docker/login-action@v3
