@@ -39,7 +39,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
           push: true
-          tags: sanamr14/test:first
+          tags: sanamr14/test:second
 
     # - name: Deploy
     #   if: success()
