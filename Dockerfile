@@ -5,7 +5,7 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-FROM node:18-alpine
+FROM node:18.15.0-alpine
 WORKDIR /usr/app
 COPY --from=build /app/src/dist/test/server ./
 CMD node server.mjs
